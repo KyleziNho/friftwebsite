@@ -29,6 +29,9 @@ const LandingPage: React.FC = () => {
 
       <section className="hero">
         <div className="animated-background">
+          <div className="wave-layer-1"></div>
+          <div className="wave-layer-2"></div>
+          <div className="wave-layer-3"></div>
           <div className="flowing-shape"></div>
           <div className="flowing-shape-2"></div>
         </div>
