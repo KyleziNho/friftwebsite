@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/LandingPage.css';
+import SplineBackground from './SplineBackground';
 
 const LandingPage: React.FC = () => {
   return (
@@ -28,13 +29,7 @@ const LandingPage: React.FC = () => {
       </header>
 
       <section className="hero">
-        <div className="animated-background">
-          <div className="wave-layer-1"></div>
-          <div className="wave-layer-2"></div>
-          <div className="wave-layer-3"></div>
-          <div className="flowing-shape"></div>
-          <div className="flowing-shape-2"></div>
-        </div>
+        <SplineBackground />
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
@@ -225,7 +220,7 @@ const LandingPage: React.FC = () => {
                 <h4>Company</h4>
                 <ul>
                   <li><a href="mailto:kyle@frift.uk">Contact</a></li>
-                  <li><a href="https://frift.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+                  <li><a href="/privacy.html">Privacy</a></li>
                   <li><a href="#terms">Terms</a></li>
                 </ul>
               </div>

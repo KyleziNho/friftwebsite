@@ -1,0 +1,138 @@
+/* Import styles from LandingPage.css for consistency */
+@import url('./LandingPage.css');
+
+.privacy-container {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+/* Privacy Hero Section */
+.privacy-hero {
+  padding: 120px 0 60px;
+  background: linear-gradient(to right, #ffffff 0%, rgba(17, 129, 228, 0.2) 100%);
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.privacy-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.privacy-date {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Privacy Content */
+.privacy-content {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.privacy-text {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.privacy-intro {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.privacy-section {
+  margin-bottom: 3rem;
+}
+
+.privacy-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.privacy-section p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.privacy-section ul {
+  color: var(--text-light);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-section li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.privacy-section strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.privacy-email {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.privacy-email:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .privacy-title {
+    font-size: 2.5rem;
+  }
+  
+  .privacy-date {
+    font-size: 1rem;
+  }
+  
+  .privacy-content {
+    padding: 60px 0;
+  }
+  
+  .privacy-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .privacy-intro {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-container {
+    justify-content: center;
+  }
+  
+  .logo {
+    margin: 0 auto;
+  }
+}
