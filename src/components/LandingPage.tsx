@@ -1,30 +1,54 @@
 import React from 'react';
 import '../styles/LandingPage.css';
 import Aurora from './Aurora';
+import CardNav from './CardNav';
 
 const LandingPage: React.FC = () => {
+  const navItems = [
+    {
+      label: "Features",
+      bgColor: "#1181E4",
+      textColor: "#fff",
+      links: [
+        { label: "Why Students Love Frift", ariaLabel: "Features", href: "#features" },
+        { label: "How It Works", ariaLabel: "How It Works", href: "#how-it-works" },
+        { label: "Post Stories", ariaLabel: "Post Stories", href: "#connect" }
+      ]
+    },
+    {
+      label: "Company",
+      bgColor: "#0d6efd",
+      textColor: "#fff",
+      links: [
+        { label: "Privacy Policy", ariaLabel: "Privacy Policy", href: "/privacy.html" },
+        { label: "Terms & Conditions", ariaLabel: "Terms and Conditions", href: "#terms" }
+      ]
+    },
+    {
+      label: "Contact",
+      bgColor: "#0a58ca",
+      textColor: "#fff",
+      links: [
+        { label: "Email", ariaLabel: "Email us", href: "mailto:kyle@frift.uk" },
+        { label: "Instagram", ariaLabel: "Instagram", href: "https://www.instagram.com/friftofficial/" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/company/friftuk/" }
+      ]
+    }
+  ];
+
   return (
     <div className="landing-container" id="top">
-      <header className="header">
-        <nav className="navbar">
-          <div className="nav-container">
-            <div className="logo">
-              <a href="#top">
-                <img src="/friftnobg.png" alt="Frift Logo" className="logo-image" />
-              </a>
-            </div>
-            <ul className="nav-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="mailto:kyle@frift.uk">Contact</a></li>
-              <li>
-                <a href="https://apps.apple.com/gb/app/frift-student-marketplace/id6745021634" className="nav-app-store-link" target="_blank" rel="noopener noreferrer">
-                  <img src="/appstore-white.svg" alt="Download on App Store" className="nav-app-store-badge" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <CardNav
+        logo="/friftnobg.png"
+        logoAlt="Frift Logo"
+        items={navItems}
+        baseColor="rgba(0, 0, 0, 0.6)"
+        menuColor="#fff"
+        buttonBgColor="#1181E4"
+        buttonTextColor="#fff"
+        buttonText="Download App"
+        buttonHref="https://apps.apple.com/gb/app/frift-student-marketplace/id6745021634"
+      />
 
       <section className="hero">
         <div className="aurora-background">
@@ -124,7 +148,7 @@ const LandingPage: React.FC = () => {
             
             <div className="how-it-works-phone">
               <div className="phone-container">
-                <img src="/phone-howfriftwork.png" alt="How Frift Works" className="phone-mockup-image" />
+                <img src="/friftapp-phone.png?v=2" alt="How Frift Works" className="phone-mockup-image" />
               </div>
             </div>
           </div>
@@ -135,7 +159,7 @@ const LandingPage: React.FC = () => {
         <div className="container">
           <div className="events-content">
             <div className="events-phone">
-              <img src="/dogstory.png" alt="Frift on Mobile" className="grandma-phone-image" />
+              <img src="/dogstory.png?v=2" alt="Frift on Mobile" className="grandma-phone-image" />
             </div>
             
             <div className="events-text">
@@ -150,17 +174,14 @@ const LandingPage: React.FC = () => {
               
               <div className="events-features">
                 <div className="events-feature-item">
-                  <span className="check-icon">✓</span>
                   <p>Buy and sell tickets with ease</p>
                 </div>
-                
+
                 <div className="events-feature-item">
-                  <span className="check-icon">✓</span>
                   <p>Stay plugged in to campus life - don't get FOMO!</p>
                 </div>
-                
+
                 <div className="events-feature-item">
-                  <span className="check-icon">✓</span>
                   <p>Score last-minute tickets to sold-out events</p>
                 </div>
               </div>
