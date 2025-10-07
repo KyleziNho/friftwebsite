@@ -21,11 +21,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Screenshots and temporary files
-*.PNG
-*.png
 Capture*
 514968592*
 516488094*
 IMG_*
 prompts.txt
-website v1.htmlnode_modules/
+website v1.html

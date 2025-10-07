@@ -1,29 +1,63 @@
 import React from 'react';
 import '../styles/Privacy.css';
-import SplineBackground from './SplineBackground';
+import CardNav from './CardNav';
+import Aurora from './Aurora';
 
 const Privacy: React.FC = () => {
+  const navItems = [
+    {
+      label: "Features",
+      bgColor: "#1181E4",
+      textColor: "#fff",
+      links: [
+        { label: "Why Students Love Frift", ariaLabel: "Features", href: "/#features" },
+        { label: "How It Works", ariaLabel: "How It Works", href: "/#how-it-works" },
+        { label: "Post Stories", ariaLabel: "Post Stories", href: "/#connect" }
+      ]
+    },
+    {
+      label: "Company",
+      bgColor: "#0d6efd",
+      textColor: "#fff",
+      links: [
+        { label: "Privacy Policy", ariaLabel: "Privacy Policy", href: "/privacy.html" },
+        { label: "Terms & Conditions", ariaLabel: "Terms and Conditions", href: "#terms" }
+      ]
+    },
+    {
+      label: "Contact",
+      bgColor: "#0a58ca",
+      textColor: "#fff",
+      links: [
+        { label: "Email", ariaLabel: "Email us", href: "mailto:kyle@frift.uk" },
+        { label: "Instagram", ariaLabel: "Instagram", href: "https://www.instagram.com/friftofficial/" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/company/friftuk/" }
+      ]
+    }
+  ];
+
   return (
     <div className="privacy-container">
-      <header className="header">
-        <nav className="navbar">
-          <div className="nav-container">
-            <div className="logo">
-              <a href="/">
-                <img src="/friftlogo.png" alt="Frift Logo" className="logo-image" />
-              </a>
-            </div>
-            <ul className="nav-links">
-              <li><a href="/#features">Features</a></li>
-              <li><a href="mailto:kyle@frift.uk">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <CardNav
+        logo="/friftnobg.png"
+        logoAlt="Frift Logo"
+        items={navItems}
+        baseColor="rgba(0, 0, 0, 0.6)"
+        menuColor="#fff"
+        buttonBgColor="#1181E4"
+        buttonTextColor="#fff"
+        buttonText="Download App"
+        buttonHref="https://apps.apple.com/gb/app/frift-student-marketplace/id6745021634"
+      />
 
       <section className="privacy-hero">
-        <div className="background-wrapper">
-          <SplineBackground />
+        <div className="aurora-background">
+          <Aurora
+            colorStops={["#1081e4", "#1081e4", "#1081e4"]}
+            blend={0.6}
+            amplitude={1.0}
+            speed={0.5}
+          />
         </div>
         <div className="container privacy-hero-overlay">
           <div className="privacy-header">
