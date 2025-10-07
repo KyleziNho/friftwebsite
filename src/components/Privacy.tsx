@@ -10,24 +10,12 @@ const Privacy: React.FC = () => {
           <div className="nav-container">
             <div className="logo">
               <a href="/">
-                <img src="/frift.svg" alt="Frift Logo" className="logo-image" />
+                <img src="/friftlogo.png" alt="Frift Logo" className="logo-image" />
               </a>
             </div>
             <ul className="nav-links">
               <li><a href="/#features">Features</a></li>
-              <li><a href="/#how-it-works">How It Works</a></li>
-              <li><a href="/#connect">Beyond the Sale</a></li>
               <li><a href="mailto:kyle@frift.uk">Contact</a></li>
-              <li>
-                <a
-                  href="https://apps.apple.com/gb/app/frift-student-marketplace/id6745021634"
-                  className="nav-app-store-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/appstore-black.png" alt="Download on App Store" className="nav-app-store-badge" />
-                </a>
-              </li>
             </ul>
           </div>
         </nav>
@@ -107,7 +95,7 @@ const Privacy: React.FC = () => {
         <div className="container">
           <div className="footer-main">
             <div className="footer-left">
-              <img src="/frift.svg" alt="Frift" className="footer-logo" />
+              <img src="/friftlogo.png" alt="Frift" className="footer-logo" />
               <p className="footer-description">
                 Your campus marketplace, simplified. Buy, sell,<br />
                 and connect with students around you.

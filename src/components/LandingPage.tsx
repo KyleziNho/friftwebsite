@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/LandingPage.css';
-import SplineBackground from './SplineBackground';
+import Aurora from './Aurora';
 
 const LandingPage: React.FC = () => {
   return (
@@ -10,17 +10,15 @@ const LandingPage: React.FC = () => {
           <div className="nav-container">
             <div className="logo">
               <a href="#top">
-                <img src="/frift.svg" alt="Frift Logo" className="logo-image" />
+                <img src="/friftnobg.png" alt="Frift Logo" className="logo-image" />
               </a>
             </div>
             <ul className="nav-links">
               <li><a href="#features">Features</a></li>
-              <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#connect">Beyond the Sale</a></li>
               <li><a href="mailto:kyle@frift.uk">Contact</a></li>
               <li>
                 <a href="https://apps.apple.com/gb/app/frift-student-marketplace/id6745021634" className="nav-app-store-link" target="_blank" rel="noopener noreferrer">
-                  <img src="/appstore-black.png" alt="Download on App Store" className="nav-app-store-badge" />
+                  <img src="/appstore-white.svg" alt="Download on App Store" className="nav-app-store-badge" />
                 </a>
               </li>
             </ul>
@@ -29,7 +27,14 @@ const LandingPage: React.FC = () => {
       </header>
 
       <section className="hero">
-        <SplineBackground />
+        <div className="aurora-background">
+          <Aurora
+            colorStops={["#1081e4", "#1081e4", "#1081e4"]}
+            blend={0.6}
+            amplitude={1.0}
+            speed={0.5}
+          />
+        </div>
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
@@ -42,7 +47,7 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
           <div className="hero-image">
-            <img src="/two-phones.png" alt="Frift App on Two Phones" className="two-phones-image" />
+            <img src="/two-phones.png?v=3" alt="Frift App on Two Phones" className="two-phones-image" />
           </div>
         </div>
       </section>
@@ -107,7 +112,7 @@ const LandingPage: React.FC = () => {
                 
                 <div className="feature-item">
                   <h3>Direct Messaging</h3>
-                  <p>Connect with buyers and sellers instantly through our built-in messaging system.</p>
+                  <p>Connect with buyers and sellers instantly through our built-in messaging system and stories feature.</p>
                 </div>
                 
                 <div className="feature-item">
@@ -130,17 +135,17 @@ const LandingPage: React.FC = () => {
         <div className="container">
           <div className="events-content">
             <div className="events-phone">
-              <img src="/grandma-nobackground.png" alt="Frift on Mobile" className="grandma-phone-image" />
+              <img src="/dogstory.png" alt="Frift on Mobile" className="grandma-phone-image" />
             </div>
             
             <div className="events-text">
               <div className="section-badge-small">
                 <span className="badge-icon">🤝</span>
-                <span>Campus Events & Social</span>
+                <span>Post Stories</span>
               </div>
-              <h2 className="events-title">Connect<br /><span className="events-subtitle">Beyond the Sale</span></h2>
+              <h2 className="events-title">No more awkwardly posting your unwanted club tickets on stories or group chats.</h2>
               <p className="events-description">
-                No more awkwardly posting your unwanted club tickets on stories or group chats.
+                
               </p>
               
               <div className="events-features">
@@ -151,12 +156,12 @@ const LandingPage: React.FC = () => {
                 
                 <div className="events-feature-item">
                   <span className="check-icon">✓</span>
-                  <p>See what your campus is doing and who's going</p>
+                  <p>Stay plugged in to campus life - don't get FOMO!</p>
                 </div>
                 
                 <div className="events-feature-item">
                   <span className="check-icon">✓</span>
-                  <p>Drop a story, send a DM, join the student scene</p>
+                  <p>Score last-minute tickets to sold-out events</p>
                 </div>
               </div>
             </div>
@@ -178,21 +183,11 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="get-in-touch">
-        <div className="container">
-          <h2 className="touch-title">Get in Touch</h2>
-          <p className="touch-description">
-            Have questions or feedback? We're here to help you get the most out of Frift.
-          </p>
-          <a href="mailto:kyle@frift.uk" className="touch-email">kyle@frift.uk</a>
-        </div>
-      </section>
-
       <footer className="footer">
         <div className="container">
           <div className="footer-main">
             <div className="footer-left">
-              <img src="/frift.svg" alt="Frift" className="footer-logo" />
+              <img src="/friftlogo.png" alt="Frift" className="footer-logo" />
               <p className="footer-description">
                 Your campus marketplace, simplified. Buy, sell,<br />
                 and connect with students around you.
