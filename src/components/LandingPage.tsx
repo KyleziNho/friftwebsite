@@ -62,7 +62,7 @@ const LandingPage: React.FC = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              The app for university students to <span className="highlight-box">buy</span>, <span className="highlight-box">sell</span> and <span className="highlight-box">connect</span>
+              The app for university students to <span className="highlight-box">buy,</span> <span className="highlight-box">sell</span> and <span className="highlight-box">connect</span>
             </h1>
             <div className="hero-buttons">
               <a href="https://apps.apple.com/gb/app/frift-student-marketplace/id6745021634" className="app-store-link" target="_blank" rel="noopener noreferrer">

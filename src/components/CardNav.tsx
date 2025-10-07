@@ -157,6 +157,32 @@ const CardNav: React.FC<CardNavProps> = ({
     }
   };
 
+  const closeMenu = () => {
+    const tl = tlRef.current;
+    if (!tl || !isExpanded) return;
+    setIsHamburgerOpen(false);
+    tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
+    tl.reverse();
+  };
+
+  // Close menu when clicking outside
+  useLayoutEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    if (isExpanded) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isExpanded]);
+
   const setCardRef = (i: number) => (el: HTMLDivElement | null) => {
     if (el) cardsRef.current[i] = el;
   };

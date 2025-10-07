@@ -36,7 +36,8 @@
           sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: var(--text-dark);
+        color: white;
+        background-color: black;
         line-height: 1.6;
       }
 
@@ -51,10 +52,11 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         z-index: 1000;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
       }
 
       .navbar {
@@ -77,9 +79,8 @@
       }
 
       .logo-image {
-        height: 120px;
+        height: 80px;
         width: auto;
-        margin: -20px 0;
       }
 
       .nav-links {
@@ -91,13 +92,17 @@
 
       .nav-links a {
         text-decoration: none;
-        color: var(--text-dark);
+        color: white;
         font-weight: 500;
         transition: color 0.3s ease;
       }
 
       .nav-links a:hover {
         color: var(--primary-color);
+      }
+
+      .logo-image {
+        filter: brightness(0) invert(1);
       }
 
       .nav-app-store-link {
@@ -116,8 +121,8 @@
 
       /* Privacy Hero Section */
       .privacy-hero {
-        padding: 120px 0 60px;
-        background: linear-gradient(to right, #ffffff 0%, rgba(17, 129, 228, 0.2) 100%);
+        padding: 140px 0 60px;
+        background: black;
         min-height: 40vh;
         display: flex;
         align-items: center;
@@ -298,20 +303,20 @@
       .privacy-title {
         font-size: 3rem;
         font-weight: 700;
-        color: var(--text-dark);
+        color: white;
         margin-bottom: 1rem;
       }
 
       .privacy-date {
         font-size: 1.1rem;
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         font-weight: 500;
       }
 
       /* Privacy Content */
       .privacy-content {
         padding: 80px 0;
-        background: var(--white);
+        background: black;
       }
 
       .privacy-text {
@@ -322,7 +327,7 @@
 
       .privacy-intro {
         font-size: 1.2rem;
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.8);
         margin-bottom: 3rem;
         text-align: center;
         line-height: 1.6;
@@ -330,25 +335,30 @@
 
       .privacy-section {
         margin-bottom: 3rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       .privacy-section h2 {
         font-size: 1.8rem;
         font-weight: 600;
-        color: var(--text-dark);
+        color: white;
         margin-bottom: 1rem;
-        border-bottom: 2px solid var(--primary-color);
+        border-bottom: 2px solid #1181E4;
         padding-bottom: 0.5rem;
       }
 
       .privacy-section p {
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         margin-bottom: 1rem;
         font-size: 1rem;
+        line-height: 1.6;
       }
 
       .privacy-section ul {
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         margin-left: 1.5rem;
         margin-bottom: 1rem;
       }
@@ -359,27 +369,27 @@
       }
 
       .privacy-section strong {
-        color: var(--text-dark);
+        color: white;
         font-weight: 600;
       }
 
       .privacy-email {
-        color: var(--primary-color);
+        color: #1181E4;
         text-decoration: none;
-        font-weight: 500;
         transition: opacity 0.3s ease;
       }
 
       .privacy-email:hover {
         opacity: 0.8;
+        text-decoration: underline;
       }
 
       /* Footer */
       .footer {
-        background: white;
-        color: var(--text-dark);
+        background: black;
+        color: white;
         padding: 60px 0 30px;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       .footer-main {
@@ -399,17 +409,18 @@
         height: 120px;
         width: auto;
         margin: -20px 0 1.5rem 0;
+        filter: brightness(0) invert(1);
       }
 
       .footer-description {
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         line-height: 1.6;
         margin-bottom: 1.5rem;
         font-size: 0.95rem;
       }
 
       .footer-email-small {
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
         font-size: 0.95rem;
         transition: color 0.3s ease;
@@ -427,7 +438,7 @@
       .footer-column h4 {
         font-size: 1rem;
         font-weight: 600;
-        color: var(--text-dark);
+        color: white;
         margin-bottom: 1.2rem;
       }
 
@@ -440,7 +451,7 @@
       }
 
       .footer-column a {
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
         font-size: 0.95rem;
         transition: color 0.3s ease;
@@ -452,10 +463,10 @@
 
       .footer-copyright {
         text-align: left;
-        color: var(--text-light);
+        color: rgba(255, 255, 255, 0.7);
         font-size: 0.9rem;
         padding-top: 30px;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       /* Responsive */
@@ -472,22 +483,30 @@
           margin: 0 auto;
         }
 
-        .privacy-title {
-          font-size: 2.5rem;
+        .privacy-hero {
+          padding: 120px 0 40px;
         }
-        
+
+        .privacy-title {
+          font-size: 2.2rem;
+        }
+
         .privacy-date {
           font-size: 1rem;
         }
-        
+
         .privacy-content {
           padding: 60px 0;
         }
-        
+
+        .privacy-section {
+          padding: 1.5rem;
+        }
+
         .privacy-section h2 {
           font-size: 1.5rem;
         }
-        
+
         .privacy-intro {
           font-size: 1.1rem;
         }
@@ -532,7 +551,7 @@
           <div class="nav-container">
             <div class="logo">
               <a href="/">
-                <img src="/friftlogo.png" alt="Frift Logo" class="logo-image" />
+                <img src="/friftnobg.png" alt="Frift Logo" class="logo-image" />
               </a>
             </div>
             <ul class="nav-links">
@@ -621,7 +640,7 @@
         <div class="container">
           <div class="footer-main">
             <div class="footer-left">
-              <img src="/friftlogo.png" alt="Frift" class="footer-logo" />
+              <img src="/friftnobg.png" alt="Frift" class="footer-logo" />
               <p class="footer-description">
                 Your campus marketplace, simplified. Buy, sell,<br />
                 and connect with students around you.
